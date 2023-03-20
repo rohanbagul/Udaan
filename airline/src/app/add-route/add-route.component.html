@@ -1,0 +1,26 @@
+<app-admin-navbar></app-admin-navbar>
+
+<div class="frm">
+    <div class="frm2">
+       <div>
+            <div class="mb-3">
+                <label class="form-label">Entre Route Code</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" [(ngModel)]="route.routeCode" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Leaving Location</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" [(ngModel)]="route.source" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Arrival Location</label>
+                <input type = "text" class="form-control" [(ngModel)] = "route.destination" id="exampleInputPassword1">
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="lgn">
+                <button type="submit" (click) = "addRoute()" class="btn btn-outline-success">Submit</button>
+            </div>
+        </div>
+    </div>

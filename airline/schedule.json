@@ -1,0 +1,264 @@
+{
+  "schedule": [
+    {
+      "flightName": "E-vimanseva",
+      "date": "2023-02-13",
+      "leavingTime": "09:00",
+      "arrivalTime": "10:00",
+      "fare_economy": 2500,
+      "fare_premium": 3500,
+      "fare_business": 4500,
+      "seatAvailable": 120,
+      "arrivalLocation": "Pune",
+      "leavingLocation": "Banglore",
+      "id": 1,
+      "istrue": false
+    },
+    {
+      "id": 2,
+      "flightName": "Air India",
+      "date": "2023-02-16",
+      "leavingTime": "09:00",
+      "arrivalTime": "10:59",
+      "fare_economy": 2500,
+      "fare_premium": 3500,
+      "fare_business": 4500,
+      "arrivalLocation": "Mumbai",
+      "leavingLocation": "Banglore",
+      "seatAvailable": 180
+    },
+    {
+      "id": 3,
+      "flightName": "Air India1",
+      "date": "2023-02-15",
+      "leavingTime": "17:35",
+      "arrivalTime": "17:35",
+      "fare_economy": 250,
+      "fare_premium": 34534,
+      "fare_business": 453,
+      "arrivalLocation": "Mumbai",
+      "leavingLocation": "Banglore",
+      "seatAvailable": 180
+    }
+  ],
+  "passanger": [
+    {
+      "id": 1,
+      "flightId": 3,
+      "fullName": "Vishal Shelke",
+      "age": 24,
+      "gender": "male",
+      "seatingClass": "Economical"
+    },
+    {
+      "fullName": "Vishal",
+      "age": 22,
+      "gender": "Male",
+      "flightId": 3,
+      "seatingClass": "Business",
+      "id": 2
+    },
+    {
+      "fullName": "Surendra",
+      "age": 24,
+      "gender": "Male",
+      "flightId": 3,
+      "seatingClass": "Business",
+      "id": 3
+    },
+    {
+      "fullName": "Vishal",
+      "age": 22,
+      "gender": "Male",
+      "flightId": 4,
+      "seatingClass": "Economical",
+      "id": 4
+    },
+    {
+      "fullName": "Surendra",
+      "age": 23,
+      "gender": "Male",
+      "flightId": 4,
+      "seatingClass": "Economical",
+      "id": 5
+    },
+    {
+      "fullName": "pradip",
+      "age": 23,
+      "gender": "Male",
+      "flightId": 4,
+      "seatingClass": "Economical",
+      "id": 6
+    },
+    {
+      "fullName": "Vishal",
+      "age": 23,
+      "gender": "Male",
+      "flightId": 3,
+      "seatingClass": "Economical",
+      "id": 7
+    },
+    {
+      "fullName": "Surendra",
+      "age": 23,
+      "gender": "Male",
+      "flightId": 3,
+      "seatingClass": "Economical",
+      "id": 8
+    },
+    {
+      "fullName": "nikhil",
+      "age": 22,
+      "gender": "Male",
+      "flightId": 1,
+      "seatingClass": "",
+      "id": 9
+    },
+    {
+      "fullName": "vishal",
+      "age": 23,
+      "gender": "Male",
+      "flightId": 1,
+      "seatingClass": "Economical",
+      "id": 10
+    },
+    {
+      "fullName": "surendra",
+      "age": 23,
+      "gender": "Male",
+      "flightId": 1,
+      "seatingClass": "Economical",
+      "id": 11
+    },
+    {
+      "fullName": "tanvi",
+      "age": 23,
+      "gender": "Female",
+      "flightId": 1,
+      "seatingClass": "Economical",
+      "id": 12
+    },
+    {
+      "fullName": "Vishal",
+      "age": 24,
+      "gender": "Male",
+      "flightId": 2,
+      "seatingClass": "Economical",
+      "id": 13
+    },
+    {
+      "fullName": "Mansi",
+      "age": 23,
+      "gender": "Female",
+      "flightId": 2,
+      "seatingClass": "Economical",
+      "id": 14
+    },
+    {
+      "fullName": "surendra",
+      "age": 23,
+      "gender": "Male",
+      "flightId": 1,
+      "seatingClass": "Premium",
+      "id": 15
+    },
+    {
+      "fullName": "vishal",
+      "age": 23,
+      "gender": "Male",
+      "flightId": 1,
+      "seatingClass": "Premium",
+      "id": 16
+    },
+    [],
+    []
+  ],
+  "flight": [
+    {
+      "id": 1,
+      "flightName": "E-vimanseva",
+      "available_seat": 180,
+      "economical_seat": 90,
+      "primium_seat": 60,
+      "business_seat": 30
+    },
+    {
+      "flightName": "Air India",
+      "available_seat": 180,
+      "economical_seat": 90,
+      "primium_seat": 60,
+      "business_seat": 30,
+      "id": 2
+    },
+    {
+      "flightName": "Air India",
+      "available_seat": 180,
+      "economical_seat": 90,
+      "primium_seat": 60,
+      "business_seat": 30,
+      "id": 3
+    }
+  ],
+  "route": [
+    {
+      "routeID": 1,
+      "routeCode": "BA",
+      "source": "Banglore",
+      "destination": "pune"
+    },
+    {
+      "routeID": 2,
+      "routeCode": "BA",
+      "source": "Banglore",
+      "destination": "Delhi"
+    },
+    {
+      "routeID": 3,
+      "routeCode": "BA",
+      "source": "Banglore",
+      "destination": "Chennai"
+    },
+    {
+      "routeID": 4,
+      "routeCode": "BA",
+      "source": "Banglore",
+      "destination": "Mumbai"
+    },
+    {
+      "routeID": 5,
+      "routeCode": "BA",
+      "source": "Banglore",
+      "destination": "Nagpur"
+    }
+  ],
+  "user": [
+    {
+      "id": 1,
+      "name": "vishal",
+      "email": "vishal@gmail.com",
+      "password": "Vishal@123",
+      "role": "user"
+    },
+    {
+      "name": "ads",
+      "email": "Vishal@gmail.com",
+      "password": "adw",
+      "id": 2,
+      "role": "admin"
+    },
+    {
+      "name": "sss",
+      "email": "Vishal@123",
+      "password": "ss",
+      "id": 3,
+      "role": "user"
+    },
+    {
+      "id": 4,
+      "name": "surendra",
+      "email": "surendra@gmail.com",
+      "password": "Surendra@123",
+      "role": "Admin"
+    }
+  ]
+}

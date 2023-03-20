@@ -1,0 +1,56 @@
+<app-navbar></app-navbar>
+<div class="cls1" *ngIf="isDataFound"><h2>No Booking Found</h2></div>
+<div *ngFor="let book of bookingdetals">
+  <div class="card">
+    <div class="card-body">
+      <div class="row">
+        <div class="col">
+          <h4>Flight Name</h4>
+
+          <h4>{{ book.flightName }}</h4>
+        </div>
+
+        <div class="col">
+          <h4>Flight Number</h4>
+
+          <h4>{{ book.flightNumber }}</h4>
+        </div>
+
+        <div class="col">
+          <h4>Arrival Location</h4>
+
+          <h4>{{ book.arrivalLocation }}</h4>
+        </div>
+
+        <div class="col">
+          <h4>Leaving Location</h4>
+
+          <h4>{{ book.departureLocation }}</h4>
+        </div>
+
+        <div class="col">
+          <h4>Date</h4>
+
+          <h4>{{ book.arrivalDate | date : "EEE, d MMM" }}</h4>
+        </div>
+
+        <div class="col">
+          <h4>Leaving Time</h4>
+          <h4>{{ book.departureTime }}</h4>
+        </div>
+
+        <div class="col">
+          <h4>Arrival Time</h4>
+
+          <h4>{{ book.arrivalTime }}</h4>
+        </div>
+
+        <div class="col">
+          <h4>Number of passanger</h4>
+
+          <h4>{{ book.passenger.length }}</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

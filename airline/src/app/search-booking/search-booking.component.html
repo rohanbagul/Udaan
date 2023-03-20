@@ -1,0 +1,81 @@
+<app-navbar></app-navbar>
+<div class="card1 card">
+    <div class="card-body">
+        <h2 class="heading">Your Booking Details</h2>
+
+
+        <div class="data row">
+            <div class="col">
+                <h4>Flight Name </h4>
+                 <h4>{{bookingdetails.flightName}}</h4>
+            </div>
+
+            <div class="col">
+                <h4>Flight Number</h4>
+               <h4>{{bookingdetails.flightNumber}}</h4> 
+            </div>
+
+            <div class="col">
+                <h4>Date</h4>
+                 <h4>{{bookingdetails.arrivalDate|date:'EEE, d MMM'}}</h4> 
+            </div>
+        </div>
+        <br>
+        <div class="loc">
+            <div class="row">
+                <div class="col">
+                    <h4>Leaving Location : {{bookingdetails.departureLocation}}</h4>
+                </div>
+                <div class="col">
+                    <h4>Arrival Location : {{bookingdetails.arrivalLocation}}</h4>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <h4>Leaving Time : {{bookingdetails.departureTime}}</h4>
+                </div>
+                <div class="col">
+                    <h4>Arrival Time : {{bookingdetails.arrivalTime}}</h4>
+                </div>
+            </div>
+        </div>
+        <br>
+
+        <div class="card data6">
+            <div class="card-body">
+                <h3 class="heading">Passenger Details</h3>
+                <div class="data3">
+                    <table style="width: 100%;">
+                        <tr>
+                            <td>Name</td>
+                            <td>Gender</td>
+                            <td>Age</td>
+                            <td>Mobile No</td>
+                            <td>Email Id</td>
+                        </tr>
+                    
+                      <tr *ngFor = "let psg of bookingdetails.passenger">
+                            <td>{{psg.passengerName}}</td>
+                            <td>{{psg.passengerGender}}</td>
+                            <td>{{psg.passengerAge}}</td>
+                            <td>{{psg.passengerMobile}}</td>
+                            <td>{{psg.passengerEmail}}</td>
+                        </tr> 
+                    </table>
+                </div>
+                <br>
+            </div>
+         
+        </div>
+        <div class="loc1">
+            <div class="row">
+            <div class="col1">
+            </div><div class="col">
+                <h4>Total Fare</h4>
+                  <h4>{{bookingdetails.totalAmount|currency:'INR'}}</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

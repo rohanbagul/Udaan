@@ -1,0 +1,42 @@
+.frm{
+    margin-left: 35%;
+    margin-right: 35%;
+    margin-top: 10%;
+    margin-bottom: 20%;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    border-radius: 7px;
+}
+
+.frm2{
+    padding: 10%;
+}
+
+.lgn{
+    margin-left: 70%;
+    margin-top: -12.5%;
+    
+}
+
+.art{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.art1{
+    margin-left: 75%;
+    margin-right: 5%;
+}
+
+.nv{
+    background-color: lightblue;
+}
+
+.lgout{
+    margin-right: 3%;
+}
+
+.lgn{
+    margin-left: 38%;
+}

@@ -1,0 +1,107 @@
+
+<app-navbar></app-navbar>
+<div class="feed">
+  <h1 class="slogo text-center">Help us to improve, Your feedback is valuable to us!!</h1>
+
+  <button
+    type="button"
+    class="btn btn1 btn-primary"
+    data-bs-toggle="modal"
+    data-bs-target="#staticBackdrop"
+  >
+    Add Feedback
+  </button>
+
+  <div
+    class="modal fade"
+    id="staticBackdrop"
+    data-bs-backdrop="static"
+    data-bs-keyboard="false"
+    tabindex="-1"
+    aria-labelledby="staticBackdropLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title" id="staticBackdropLabel">Add Feedback</h2>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="exampleFormControlInput1">Enter Name</label>
+              <input
+                type="text"
+                class="form-control"
+                name="name"
+                placeholder="name"
+                [(ngModel)]="feed.name"
+              />
+            </div>
+            <br />
+            <div class="form-group">
+              <label for="exampleFormControlInput1">Enter Email</label>
+              <input
+                type="email"
+                class="form-control"
+                name="email"
+                placeholder="name@example.com"
+                [(ngModel)]="feed.email"
+              />
+            </div>
+            <br />
+            <div class="form-group">
+              <label for="exampleFormControlTextarea1"
+                >Give Your Valuable Feedback</label
+              >
+              <textarea
+                class="form-control"
+                name="feedback"
+                [(ngModel)]="feed.description"
+                rows="3"
+              ></textarea>
+            </div>
+          </form>
+        </div>
+
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+          >
+            Close
+          </button>
+          <button
+            type="button"
+            class="btn btn-primary"
+            (click)="submitFeedback()"
+          >
+            Submit
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="feedbacks">
+    <div *ngFor="let feed of feedbacks">
+      <div class="card">
+        <div class="card-body">
+          <div class="col">
+        
+              <h3>{{ feed.description }}</h3>
+              <h4>{{ feed.name }}</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

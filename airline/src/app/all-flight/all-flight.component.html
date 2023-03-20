@@ -1,0 +1,23 @@
+<app-admin-navbar></app-admin-navbar>
+<div class="table">
+<table style="width: 80%;">
+    <tr>
+        <td>Flight Id</td>
+        <td>Flight Name</td>
+        
+        <td>Economical Seats</td>
+        <td>Primium Seats</td>
+        <td>Business Seats</td>
+        <td>Schdule Flight</td>
+        <td>Remove Flight</td>
+    </tr>
+
+    <tr *ngFor = "let flght of flights">
+        <td>{{flght.id}}</td>
+        <td>{{flght.flightName}}</td>
+        <td *ngFor = "let st of flght.seats">{{st.seatCapacity}}</td>
+        <td><button type="button" (click)="addSchedule(flght)" routerLink="/addSchdule" class="btn btn-outline-success">Schedule Flight</button></td>
+        <td><button type="button" (click) = "removeFlight(flght.id)"  class="btn btn-outline-danger">Delete Flight</button></td> 
+    </tr>
+</table>
+</div>

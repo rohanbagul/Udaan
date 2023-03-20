@@ -1,0 +1,32 @@
+.nv{
+    background-color: lightblue;
+}
+.lgout{
+    margin-right: 3%;
+}
+.nav1{
+    margin-right: -30%;
+}
+
+.navbar{
+    background: linear-gradient(to bottom, #87CEEB, #FFFFFF);
+}
+.logo-text {
+    font-family: Arial, sans-serif;
+    font-size: 30px;
+  }
+  
+  /* Apply gradient color to Udaan logo */
+  .gradient-text {
+    background: linear-gradient(to right, #2196f3, #6ec6ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+
+  .img {
+    width: 75px; 
+    height: 75px; 
+    border-radius: 50%;
+  }
+  

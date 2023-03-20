@@ -1,0 +1,34 @@
+{
+  
+    "flight":[
+    {
+      "flightId":1,
+      "flightName":"E_Vimanseva1",
+      "leavingLocation":"Mumbai",
+      "arrivalLocation":"Pune", 
+      "daprtTime":"Tue Feb 07 2023 14:12:21 GMT+0530 (India Standard Time)",
+      "seatAvilable":60,
+      "fare":4500
+    },
+    {
+      "flightId":2,
+      "flightName":"E_Vimanseva2",
+      "leavingLocation":"Mumbai",
+      "arrivalLocation":"Pune", 
+      "departTime":"Tue Feb 08 2023 14:12:21 GMT+0530 (India Standard Time)",
+      "seatAvilable":60,
+      "fare":5000
+    },
+    {
+      "flightId":1,
+      "flightName":"E_Vimanseva1",
+      "leavingLocation":"Mumbai",
+      "arrivalLocation":"Pune", 
+      "daprtTime":"Tue Feb 09 2023 14:12:21 GMT+0530 (India Standard Time)",
+      "seatAvilable":60,
+      "fare":4300
+    }
+  
+    ]
+  
+}

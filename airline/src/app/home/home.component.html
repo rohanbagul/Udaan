@@ -1,0 +1,54 @@
+
+<app-navbar></app-navbar>
+
+
+<div id="booking" class="section">
+  <div class="section-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="booking-cta">
+            <h1>Book your</h1> <h1>flight today</h1>
+            <p>Experience the joy of soaring high with Udaan - where your dream destinations are just a click away.</p>
+          </div>
+        </div>
+        
+        <div class="col-md-7 col-md-offset-1">
+          <div class="booking-form">
+            <form>
+              <div class="form-group searchflight text-center">
+                <h1>Get Your Flight Now!!</h1>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <br>
+                  <select name="leave" [(ngModel)]="leave" class="form-select" aria-label=".form-select-lg example">
+                    <option>From</option>
+                    <option *ngFor="let lev of allSources">{{ lev }}</option>
+                  </select>
+                </div>
+            <div class="col">
+              <br>
+              <select name="arrive" [(ngModel)]="arrive" class="form-select" aria-label=".form-select-lg example">
+                <option>To</option>
+                <option *ngFor="let arrv of alldestinations">{{ arrv }}</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-btn btn-block">
+            <button type="submit" class="btn btn-success" (click)="submit()">Search</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+</div> 
+<app-footer></app-footer>
+
+
+
+
+

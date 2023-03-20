@@ -1,0 +1,22 @@
+<app-admin-navbar></app-admin-navbar>
+<div class="table">
+<table style="width: 80%;">
+    <tr>
+        <td>User Id</td>
+        <td>First Name</td>
+        <td>Last Name</td>
+        <td>Email</td>
+        <td>Remove User</td>
+      
+    </tr>
+
+    <tr *ngFor = "let user of users">
+        <td>{{user.id}}</td>
+        <td>{{user.firstname}}</td>
+        <td>{{user.lastname}}</td>
+        <td>{{user.email}}</td>
+        <td><button type="button" (click)="removeUser(user.id)"  class="btn btn-outline-danger">Delete User</button></td>
+    </tr>
+</table>
+</div>
+

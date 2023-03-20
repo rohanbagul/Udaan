@@ -1,0 +1,18 @@
+<app-admin-navbar></app-admin-navbar>
+<div class="table">
+    <table style="width: 80%;">
+        <tr>
+            <td>From</td>
+            <td>To</td>
+            <td>Remove Routes</td>
+            
+        </tr>
+    
+        <tr *ngFor = "let route of allroutes">
+            <td>{{route?.source}}</td>
+            <td>{{route?.destination}}</td>
+            <td><button class="btn btn-outline-danger" (click)="removeRoute(route.id)" type="submit">Remove Route</button></td>
+            
+        </tr>
+    </table>
+    </div>

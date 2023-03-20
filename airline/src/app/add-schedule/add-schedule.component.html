@@ -1,0 +1,90 @@
+<app-admin-navbar></app-admin-navbar>
+<div class="frm">
+    <div class="frmdata">
+        <h1 class="data1">Schdule Flight</h1>
+        <div class="mb-3">
+            <div class="row">
+                <div class="col">
+                    <label for="exampleFormControlInput1" class="form-label">Flight Number</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1"
+                        [(ngModel)]="flight1.flightNumber" placeholder="Entre Flight Id">
+                </div>
+                <div class="col">
+                    <label for="exampleFormControlInput1" class="form-label">Flight Name</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1"
+                        [(ngModel)]="flight1.flightName" placeholder="Entre Flight Name">
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div class="row">
+                
+                <div class="col">
+
+                    <br>
+                    <select name="leave" [(ngModel)]="leave" class="form-select" aria-label=".form-select-lg example">
+                        <option>From</option>
+                        <option *ngFor="let lev of allSources">{{lev}}</option>
+                    </select>
+                </div>
+                <div class="col">
+                    <br>
+                    <select name="arrive" [(ngModel)]="arrive" class="form-select "
+                        aria-label=".form-select-lg example">
+                        <option>To</option>
+                        <option *ngFor="let arrv of alldestinations">{{arrv}}</option>
+                    </select>
+
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Select Date</label>
+            <br>
+            <input type="date" [(ngModel)]="schduleFlight.arrivalDate">
+        </div>
+        <br>
+        <div class="row">
+            <div class="col">
+                <label for="exampleFormControlTextarea1" class="form-label">Select Leaving Time</label>
+                <br>
+                <input [(ngModel)]="schduleFlight.departureTime" type="time">
+            </div>
+            <div class="col">
+                <label for="exampleFormControlTextarea1" class="form-label">Select Arrival Time</label>
+                <br>
+                <input [(ngModel)]="schduleFlight.arrivalTime" type="time">
+            </div>
+        </div>
+        <br>
+        <br>
+        <h4>Fare Model</h4>
+        <div class="row">
+            <div class="col">
+                <label for="exampleFormControlTextarea1" class="form-label">Economical Class</label>
+                <br>
+                <input [(ngModel)]="schduleFlight.economyFare" type="number"
+                    placeholder="Entre Fare For Economical Class">
+            </div>
+            <div class="col">
+                <label for="exampleFormControlTextarea1" class="form-label">Premium Class</label>
+                <br>
+                <input [(ngModel)]="schduleFlight.premiumFare" type="number"
+                    placeholder="Entre Fare For Primium Class">
+            </div>
+            <div class="col">
+                <label for="exampleFormControlTextarea1" class="form-label">Business Class </label>
+                <br>
+                <input [(ngModel)]="schduleFlight.bussinessFare" type="number"
+                    placeholder="Entre Fare For Business Class">
+            </div>
+        </div>
+        <br>
+
+        <div class="btn1">
+            <button (click)="submit()" type="button" class="btn btn-outline-success">Submit</button>
+        </div>
+    </div>
+</div>

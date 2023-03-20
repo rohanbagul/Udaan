@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login Udaan</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+      body {
+        background-color: #f8f9fa;
+        background-image: url('/assets/images/background.jpg'); 
+
+      }
+
+      .btn-outline-success {
+        border-color: #28a745;
+        color: #28a745;
+        /* font-weight: bold; */
+      }
+      .btn-outline-success:hover {
+        background-color: #28a745;
+        color: #fff;
+      }
+      .frm {
+        margin-top: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+      }
+      .frm2 {
+        max-width: 500px;
+        color:white;
+        width: 100%;
+        /* background-color:#c3e6cb; */
+        /* background: linear-gradient(bottom, #c3e6cb, white); height: 200px; */
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+        padding: 50px;
+
+      }
+      .form-label {
+        font-weight: bold;
+        color: #333;
+      }
+      .btn-outline-success[type="submit"] {
+        width: 100%;
+        padding: 15px;
+        font-size: 1.2rem;
+        margin-top: 20px;
+      }
+      .alert {
+        margin-bottom: 20px;
+      }
+      .alert-danger {
+        background-color: #f8d7da;
+        color: #721c24;
+        border-color: #f5c6cb;
+      }
+      .alert-danger .btn-close {
+        color: #721c24;
+      }
+      .alert-success {
+        background-color: #d4edda;
+        color: #155724;
+        border-color: #c3e6cb;
+      }
+      .alert-success .btn-close {
+        color: #155724;
+      }
+
+      
+    </style>
+  </head>
+    <div class="nv">
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light text-end">
+        <div class="container-fluid">
+          <a class="navbar-brand" routerLink="/home">
+            <h1 class="logo-text">
+             <span>            <img class="img" src="assets/images/MicrosoftTeams-image.png"/>
+             </span> <span class="gradient-text">U</span><span class="gradient-text">D</span><span class="gradient-text">A</span><span class="gradient-text">A</span><span class="gradient-text">N</span>
+            </h1>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+            
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a routerLink="/home" class="nav-link">Home</a>
+              </li>
+              <li class="nav-item">
+                <a routerLink="/register" class="nav-link">Register</a>
+              </li>
+            </ul>
+            
+  
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 offset-md-2">
+          <div class="art">
+            <div *ngIf="isLogin" class="alert alert-danger alert-dismissible fade show" role="alert">
+              <strong>Invalid Email Id or Password</strong>
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+          </div>
+
+          <div class="art">
+            <div *ngIf="isRole" class="alert alert-danger alert-dismissible fade show" role="alert">
+              <strong>Please Select corret role</strong>
+
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            </div>
+            
+            
+            <div class="art1">
+            <div *ngIf="isregister" class="alert alert-success alert-dismissible fade show" role="alert">
+                <strong>Registration Sucess</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            </div>
+            
+            <div class="frm">
+            <div class="frm2">
+                <form [formGroup]="addForm" (ngSubmit)="loginUser()">
+                    <div class="form-group">
+                      <label for="exampleInputEmail1" class="form-label">Email</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" name="email" formControlName="email" aria-describedby="emailHelp" placeholder="Enter email" [(ngModel)]="user.email" >
+                      <div *ngIf="email?.invalid" class="alert alert-danger">
+                        <div *ngIf="email?.errors?.['required']">Email is required</div>
+                        <div *ngIf="email?.errors?.['email']">Invalid email format</div>
+                      </div>
+                    </div>
+                    <div class="form-group ">
+                      <label for="exampleInputPassword1" class="form-label">Password</label>
+                      <input type="password" name="password" id="exampleInputPassword1" aria-describedby="password" [(ngModel)]="user.password" formControlName="password" class="form-control" placeholder="Enter password">
+                      <div *ngIf="password?.invalid" class="alert alert-danger">
+                        <div *ngIf="password?.errors?.['required']">Password is required</div>
+                      </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary" [disabled]="addForm.invalid">Login</button>
+                  </form>
+            </div>
+            
+            </div>
+
+
+
+
+

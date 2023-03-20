@@ -1,0 +1,25 @@
+.flight{
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 5%;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    background: linear-gradient(to bottom, #87CEEB, #FFFFFF);
+    font-family: 'Lato', sans-serif;
+	background-image: url('/assets/images/background.jpg'); 
+
+}
+
+.heading{
+    text-align: center;
+
+}
+
+.btn1{
+    margin-left: 42%;
+}
+
+.data{
+    padding: 5%;
+}

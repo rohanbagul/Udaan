@@ -1,0 +1,101 @@
+<app-navbar></app-navbar>
+
+
+
+<div *ngFor="let schdl of schedules">
+    <div class="card">
+        <div class="card-body">
+            <div class=row>
+
+                <div class="col">
+                    <h4>Flight Number</h4>
+                    <h4>{{schdl.flightNumber}}</h4>
+                </div>
+                <div class="col">
+                    <h4>Flight Name</h4>
+                    <h4>{{schdl.flightName}}</h4>
+                </div>
+
+                <div class = "col">
+                    <h4>From</h4>
+                    <h4>{{schdl.leavingLocation}}</h4>
+                </div>
+                <div class = "col">
+                    <h4>To</h4>
+                    <h4>{{schdl.arrivalLocation}}</h4>
+                </div>
+               
+                <div class="col">
+                    <h4>Date</h4>
+                    <h4>{{schdl.arrivalDate|date:'EEE, d MMM'}}</h4>
+                </div>
+
+                <div class="col">
+                    <h3>Leaving Time</h3>
+                    <h4>{{schdl.departureTime}}</h4>
+                </div>
+
+                <div class="col">
+                    <h4>Arrival Time</h4>
+                    <h4>{{schdl.arrivalTime}}</h4>
+                </div>
+
+                <div class="col">
+                    <div class="btn1">
+                        <button style="margin-top: 1%;" type="button" class="btn btn-outline-success" [popover]="template" triggers="mouseenter:mouseleave"
+                            (click)="showCard1(schdl)">Seat Availablity</button>
+                    </div>
+                    <br>
+                    <!-- <mat-card class="cd" *ngIf="schdl.istrue1">
+                        <div>
+                            <div class="card-body">
+                                
+                                <h4>Economical  {{schdl.economySeats}}</h4> 
+                                <h4>Premium  {{schdl.premiumSeats}}</h4>
+                                <h4>Bussiness  {{schdl.bussinessSeats}}</h4>
+                            </div>
+                        </div>
+                    </mat-card> -->
+
+                    <ng-template #template>
+                        <h4>Economical  {{schdl.economySeats}}</h4> 
+                        <h4>Premium  {{schdl.premiumSeats}}</h4>
+                        <h4>Bussiness  {{schdl.bussinessSeats}}</h4>
+                    </ng-template>
+                </div>
+
+
+                <div class="col">
+                    <div class="btn1">
+                        <button style="margin-top: 1%;" type="button" class="btn btn-outline-success" [popover]="template"  triggers="mouseenter:mouseleave"
+                            ((hover))="showCard(schdl)">Check Fare</button>
+                    </div>
+                    <br>
+                    <!-- <mat-card class="cd" *ngIf="schdl.istrue">
+                        <div>
+                            <div class="card-body">
+                                <h4>Economical {{schdl.economyFare|currency:'INR'}}</h4>
+                                <h4>Primium {{schdl.premiumFare|currency:'INR'}}</h4>
+                                <h4>Business {{schdl.bussinessFare|currency:'INR'}}</h4>
+                            </div>
+                        </div>
+                    </mat-card> -->
+
+                    <ng-template #template>
+                        <h4>Economical {{schdl.economyFare|currency:'INR'}}</h4>
+                        <h4>Primium {{schdl.premiumFare|currency:'INR'}}</h4>
+                        <h4>Business {{schdl.bussinessFare|currency:'INR'}}</h4>
+                    </ng-template>
+                </div>
+
+                <div class="col btn">
+                    <button type="button" class="btn btn-outline-success" (click) = "onClick(schdl)" >BOOK NOW</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<h1 class = "msg" *ngIf = "isTrue">Sorry No Schedule For Now</h1>
+

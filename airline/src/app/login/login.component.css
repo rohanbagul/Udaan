@@ -1,0 +1,56 @@
+
+  .nv{
+    background-color: lightblue;
+    height: 10px;
+}
+.lgout{
+    margin-right: 3%;
+}
+.search{
+    margin-right: 1%;
+}
+.nav1{
+    margin-right: -30%;
+}
+
+.navbar{
+
+    margin: 0%;
+    padding: 0%;
+    background: linear-gradient(to bottom, #87CEEB, #FFFFFF);
+    font-family: 'Lato', sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+
+}
+
+.logo-text {
+	font-family: 'Lato', sans-serif;
+    font-size: 30px;
+  }
+  
+  .gradient-text {
+    background: linear-gradient(to right, #2196f3, #6ec6ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+
+  .img {
+    width: 75px; 
+    height: 55px; 
+    border-radius: 50%;
+  }
+  .container-fluid{
+    align-items: baseline;
+    justify-content: center;
+  }
+.footer-content{
+    align-items:baseline;
+    justify-content: baseline;
+}
+
+.frm2{
+	background-image: url('/assets/images/background.jpg'); 
+
+}

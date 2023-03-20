@@ -1,0 +1,169 @@
+/* .card{
+    margin-left: 6%;
+    margin-right: 6%;
+    margin-top: 1%;
+    background-color: transparent;
+}
+.container{
+    margin-left: 6%;
+    margin-right: 6%;
+    margin-top: 1%;
+}
+.card1{
+    margin-left: 6%;
+    margin-right: 6%;
+    margin-top: 1%;
+    margin-bottom: 2%;
+}
+.card{
+     border-style: solid;
+     border-width: 2px;
+     border-radius: 7px;
+     border-color: rgb(10, 9, 5);
+    }
+.btn1{
+    margin-left: 6%;
+    margin-right: 6%;
+     margin-top: 1%;
+     margin-bottom: 2%;
+    }
+.bdy{
+    background-color: rgb(121, 101, 140);
+}
+.cd{
+     background-color: rgb(236, 201, 236);
+      border-style: solid;
+      border-width: 3px;
+      border-color: black;
+      border-radius: 4px;
+    }
+.msg{
+    margin-top: 5%;
+    margin-left: 35%;
+    color: red;
+}
+.pd{
+    padding: 3%;
+}
+
+.feed{
+    font-family: 'Lato', sans-serif;
+	background-image: url('/assets/images/background.jpg'); 
+    height: 100%;
+	background-size: cover;
+	background-position: center;
+	color: #191a1e;
+
+    
+} */
+
+
+
+
+
+
+
+
+
+  
+  /* Feedback form */
+  .feed {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* margin-top: 50px; */
+    font-family: 'Lato', sans-serif;
+	/* background-image: url('/assets/images/background.jpg');  */
+    /* background-color: rgb(245,252,255); */
+    height: 100%;
+	background-size: cover;
+	background-position: center;
+	color: #191a1e;
+
+    
+
+    
+  }
+  
+  .btn1 {
+    margin-top: 20px;
+  }
+  
+  /* Feedback modal */
+  .modal-dialog {
+    max-width: 600px;
+    margin: 1.75rem auto;
+  }
+  
+  .modal-content {
+    border-radius: 0.5rem;
+  }
+  
+  .modal-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .modal-body {
+    padding: 30px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  /* Feedback card */
+  .feedbacks {
+    /* display: flex;
+    flex-wrap: wrap; */
+    /* justify-content: center; */
+    margin-top: 50px;
+    width: 70%;
+  }
+  
+  .card {
+    width: 100%; 
+    height: 20%;
+    margin: 2%;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.3s ease;
+    background: transparent;
+}
+  
+  .card:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .card-body {
+  
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+
+
+  }
+  
+  h4 {
+    font-weight: 100;
+    font-size: smaller;
+  }
+  
+  h3 {
+    font-size: 16px;
+    
+  }
+
+
+  .slogo{
+    margin-top: 2%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #00B4DB;  /* fallback for old browsers */
+    color: -webkit-linear-gradient(to right, #0083B0, #00B4DB);  /* Chrome 10-25, Safari 5.1-6 */
+    color: linear-gradient(to right, #0083B0, #00B4DB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    
+  }

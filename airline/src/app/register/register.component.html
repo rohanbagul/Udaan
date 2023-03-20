@@ -1,0 +1,98 @@
+<!-- <div class="nv">
+    <nav class="navbar navbar-expand-lg ">
+        <div class="container-fluid">
+            <a class="navbar-brand">E-Vimanseva</a>
+        </div>
+        <div class="lgout">
+            <a routerLink="/home"><button class="btn btn-outline-success" type="submit">Home</button></a>
+        </div>
+        <div class="lgout">
+            <a routerLink="/login"><button class="btn btn-outline-success" type="submit">Login</button></a>
+        </div>
+    </nav>
+</div> -->
+
+<div class="nv">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <h3 class="logo-text">
+          <span class="gradient-text">U</span><span class="gradient-text">D</span><span class="gradient-text">A</span><span class="gradient-text">A</span><span class="gradient-text">N</span>
+        </h3>
+      </div>
+      <div class="lgout">
+        <a routerLink="/home"><button class="btn btn-outline-success" type="submit">Home</button></a>
+      </div>
+      <div class="lgout">
+        <a routerLink="/login"><button class="btn btn-outline-success" type="submit">Login</button></a>
+      </div>
+    </nav>
+  </div>
+
+
+<div class="art">
+    <div *ngIf="isUser" class="alert alert-danger alert-dismissible fade show" role="alert">
+        <strong>Entre User Name</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <div *ngIf="isregister" class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>Registration Sucess</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <div *ngIf="isEmail" class="alert alert-danger alert-dismissible fade show" role="alert">
+        <strong>Entre Email</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <div *ngIf="isEmailValid" class="alert alert-danger alert-dismissible fade show" role="alert">
+        <strong>Invalid Email Id</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <div *ngIf="isExist" class="alert alert-danger alert-dismissible fade show" role="alert">
+        <strong>User already Exist</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <div *ngIf="isPassword" class="alert alert-danger alert-dismissible fade show" role="alert">
+        <strong>Entre Password</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+</div>
+
+
+<div class="frm">
+    <div class="frm2">
+        <form [formGroup]="addForm" (ngSubmit)="addUser()">
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">First Name</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                    formControlName="firstname" [(ngModel)]="user.firstname">
+            </div>
+
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Last Name</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                    formControlName="lastname" [(ngModel)]="user.lastname">
+            </div>
+
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                    formControlName="email" [(ngModel)]="user.email">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" formControlName="password"
+                    [(ngModel)]="user.password">
+            </div>
+            <div class="mb-3 form-check">
+            </div>
+            <br>
+            <br>
+  
+
+            <div class="lgn">
+                <button type="submit" class="btn btn-secondary">Register</button>
+            </div>
+        </form>
+
+    </div>
+
+</div>

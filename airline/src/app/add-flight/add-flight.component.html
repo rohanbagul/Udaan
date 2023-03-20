@@ -1,0 +1,116 @@
+<app-admin-navbar></app-admin-navbar>
+
+<div class="flight">
+  <div class="data">
+    <div class="heading">
+      <h2>Enter Flight Details</h2>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label"
+        >Enter Flight Name</label
+      >
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Enter Flight Name"
+        [(ngModel)]="flight.flightName"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label"
+        >Enter Flight Number</label
+      >
+      <input
+        type="text"
+        class="form-control"
+        id="exampleInputPassword1"
+        placeholder="Enter Flight Number"
+        [(ngModel)]="flight.flightNumber"
+      />
+    </div>
+    <div class="row">
+      <div class="col mb-3">
+        <label for="exampleInputPassword1" class="form-label"
+          >Economical Seats</label
+        >
+        <input
+          type="number"
+          class="form-control"
+          id="exampleInputPassword1"
+          placeholder="Enter Total Economical Seat Capacity"
+          [(ngModel)]="seatEconomy.seatCapacity"
+        />
+      </div>
+      <div class="col mb-3">
+        <label for="exampleInputPassword1" class="form-label"
+          >Premium Seats</label
+        >
+        <input
+          type="number"
+          class="form-control"
+          id="exampleInputPassword1"
+          placeholder="Enter Total Premium Seat Capacity"
+          [(ngModel)]="seatPremium.seatCapacity"
+        />
+      </div>
+      <div class="col mb-3">
+        <label for="exampleInputPassword1" class="form-label"
+          >Business Seats</label
+        >
+        <input
+          type="number"
+          class="form-control"
+          id="exampleInputPassword1"
+          placeholder="Enter Total Business Seat Capacity"
+          [(ngModel)]="seatBusiness.seatCapacity"
+        />
+      </div>
+    </div>
+    <div class="btn1">
+      <button (click)="addFlight()" class="btn btn-outline-info">Submit</button>
+    </div>
+  </div>
+</div>
+<style>
+  .flight {
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 700px;
+    background-color: #f5f5f5;
+  }
+
+  .heading {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .btn1 {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .form-label {
+    font-weight: bold;
+  }
+
+  input[type="text"],
+  input[type="number"] {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    width: 100%;
+  }
+
+  button {
+    margin-top: 10px;
+    padding: 5px 20px;
+    border-radius: 5px;
+  }
+
+  button:hover {
+    cursor: pointer;
+  }
+</style>

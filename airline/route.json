@@ -1,0 +1,35 @@
+{
+  "route": [
+    {
+      "routeID": 1,
+      "routeCode": "BA",
+      "source": "Banglore",
+      "destination": "pune"
+    },
+    {
+      "routeID": 2,
+      "routeCode": "BA",
+      "source": "Banglore",
+      "destination": "Delhi"
+    },
+    {
+      "routeID": 3,
+      "routeCode": "BA",
+      "source": "Banglore",
+      "destination": "Chennai"
+    },
+    {
+      "routeID": 4,
+      "routeCode": "BA",
+      "source": "Banglore",
+      "destination": "Mumbai"
+    },
+    {
+      "routeID": 5,
+      "routeCode": "BA",
+      "source": "Banglore",
+      "destination": "Nagpur"
+    }
+    
+  ]
+}

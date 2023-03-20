@@ -1,0 +1,20 @@
+.frm{
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 7%;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    background-color: rgb(196, 228, 233);
+}
+.data1{
+    text-align: center;
+}    
+
+.frmdata{
+    padding: 4%;
+}
+
+.btn1{
+    margin-left: 43%;
+}

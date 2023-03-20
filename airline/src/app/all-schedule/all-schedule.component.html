@@ -1,0 +1,94 @@
+<app-navbar></app-navbar>
+
+<div *ngFor="let schdl of schedules">
+    <div class="card">
+        <div class="card-body">
+            <div class=row>
+                <div class="col">
+                    <h4>Flight Name</h4>
+                    <h4>{{schdl.flightName}}</h4>
+                </div>
+
+                <div class="col">
+                    <h4>Flight Id</h4>
+                    <h4>{{schdl.flightNumber}}</h4>
+                </div>
+                <div class="col">
+                    <h4>From</h4>
+                    <h4>{{schdl.leavingLocation}}</h4>
+                </div>
+                <div class="col">
+                    <h4>To</h4>
+                    <h4>{{schdl.arrivalLocation}}</h4>
+                </div>
+
+                
+
+                <div class="col">
+                    <h4>Date</h4>
+                    <h4>{{schdl.arrivalDate|date:'EEE, d MMM'}}</h4>
+                </div>
+
+                <div class="col">
+                    <h4>Leaving Time</h4>
+                    <h4>{{schdl.departureTime}}</h4>
+                </div>
+
+                <div class="col">
+                    <h4>Arrival Time</h4>
+                    <h4>{{schdl.arrivalTime}}</h4>
+                </div>
+
+
+                <!-- <div class="col">
+                    <div class="btn1">
+                        <button style="margin-top: 1%;" type="button" class="btn btn-outline-success"
+                            (click)="showCard1(schdl)">Seat Availablity</button>
+                    </div>
+                    <br>
+                    <mat-card class="cd" *ngIf="schdl.istrue1">
+                        <div>
+                            <div class="card-body">
+                                <h4 *ngFor = "let flg of schdl.flight.seats">{{flg.seatClass}} : {{flg.seatCapacity}}</h4>
+                            </div>
+                        </div>
+                    </mat-card>
+                </div> -->
+
+
+                <div class="col">
+                    <div class="btn1">
+                        <button style="margin-top: 1%;" type="button" class="btn btn-outline-success"
+                            (click)="showCard(schdl)">Check Fare</button>
+                    </div>
+                    <br>
+                    <mat-card class="cd" *ngIf="schdl.istrue">
+                        <div>
+                            <div class="card-body">
+                                <h4>Economical {{schdl.economyFare|currency:'INR'}}</h4>
+                                <h4>Primium {{schdl.premiumFare|currency:'INR'}}</h4>
+                                <h4>Business {{schdl.bussinessFare|currency:'INR'}}</h4>
+                            </div>
+                        </div>
+                    </mat-card>
+                </div>
+
+                <div class="col">
+                    <div class="btn1">
+                        <h4><button style="margin-top: 2%;" type="button"
+                              (click)="updateSchedule(schdl)"  class="btn btn1 btn-outline-warning">Update</button></h4>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="btn1">
+                        <h4><button style="margin-top: 2%;" type="button"
+                             (click)="deleteSchedule(schdl.scheduleId)"   class="btn btn1 btn-outline-danger">Delete</button></h4>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+

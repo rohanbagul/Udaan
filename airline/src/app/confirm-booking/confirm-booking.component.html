@@ -1,0 +1,36 @@
+<app-navbar></app-navbar>
+<div class="frm">
+    <h1 style="color: green;">Congratulations !!!</h1>
+    <h1 style="color: green;">Your Booking has Been Confirmed</h1>
+</div>
+<br>
+<br>
+
+<button type="button" (click) = "display()" class="btn btn-outline-info">Check Booking Details</button>
+<br>
+<br>
+<br>
+<br>
+<div *ngIf = "isDisplay" class = "table">
+<table style="width:80%">
+    <tr>
+         <td>Booking Id</td> 
+        <td>flight Number</td>
+        <td>Flight name</td>
+        <td>From</td>
+        <td>Leaving Time</td>
+    </tr>
+
+   
+    <tr>
+         <td>{{bookingId}}</td> 
+        <td>{{schedule.flightNumber}}</td>
+        <td>{{schedule.flightName}}</td>
+        <td>{{schedule.leavingLocation}}</td>
+        <td>{{schedule.departureTime}}</td> 
+    </tr>  
+</table>
+<br>
+<button type="button" routerLink="/booking" class="btn btn-outline-info">Add More Passengers</button>
+</div>
+

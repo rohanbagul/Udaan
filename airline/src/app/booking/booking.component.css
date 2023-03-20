@@ -1,0 +1,77 @@
+.card1{
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 2%;
+    border: solid;
+    border-color: black;
+    border-width: 6px;
+    background-color: rgb(224, 245, 245);
+}
+.card{
+    border: solid;
+    border-color: black;
+    border-width: 2px;
+    /* //background-color: rgb(184, 159, 206); */
+}
+.heading{
+    text-align: center;
+}
+
+.data{
+    margin-left: 14.5%;
+}
+.loc{
+    margin-left: 16%;
+}
+
+.data1{
+    margin-left: 11%;
+}
+.data3{
+    margin-left: 13%;
+}
+.data4{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.btn{
+    margin-left: 35%;
+    margin-right: 35%;
+    margin-bottom: 1%;
+}
+
+.data5{
+    margin-right: 100%;
+}
+
+.data6{
+    background-color: rgb(223, 209, 236);
+}
+
+.data7{
+    margin-left: 6%;
+    margin-right: 6%;
+}
+
+.data8{
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 1%;
+}
+
+.frm{
+    padding: 2%;
+}
+
+.cd{
+    padding: 1%;
+}
+
+.td{
+    margin-left: 3%;
+}
+
+.data0{
+    margin-left: 14.5%;
+}

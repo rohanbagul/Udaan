@@ -1,0 +1,154 @@
+<app-navbar></app-navbar>
+<div class="card1 card">
+    <div class="card-body">
+        <h2 class="heading">Flights Details</h2>
+        <div class="data row">
+            <h3>Flight Number:  <span>{{schedule.flightNumber}}</span></h3>
+            <h3>Flight Name:  <span>{{schedule.flightName}}</span></h3>
+
+
+        </div>
+
+        <div class="data loc">
+            <div class="row">
+                <div class="col">
+                    <h4>From : {{schedule.leavingLocation}}</h4>
+                </div>
+                <div class="col">
+                    <h4>To : {{schedule.arrivalLocation}}</h4>
+                </div>
+                
+            </div>
+
+            <div class=" row">
+                <div class="col mr-5">
+                    <h4> Date: <span>{{schedule.arrivalDate|date:'EEE, d MMM'}}</span>
+                </h4>
+                </div>
+                <div class="col">
+
+                    <h4>Leaving Time : {{schedule.departureTime}}</h4>
+                </div>
+                <div class="col">
+                    <h4>Arrival Time : {{schedule.arrivalTime}}</h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="data0 row">
+            <h3 >Fare Details: &nbsp;<span>Economy : {{schedule.economyFare|currency:'INR'}}</span>&nbsp;&nbsp;     <span>Premium : {{schedule.premiumFare|currency:'INR'}}</span>&nbsp;&nbsp;   <span>Business : {{schedule.bussinessFare|currency:'INR'}}</span></h3>
+        </div>
+       
+        <div class="card data6">
+            <div class="card-body">
+                <h3 class="data0">Select Class</h3>
+           <div class="row">
+                <div class="col">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      Select Class
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" value="Economy" [(ngModel)]="booking.seatClass"> Economy</a>
+                      </li>
+                      <li><a class="dropdown-item" value="Bussiness" [(ngModel)]="booking.seatClass">Bussiness</a></li>
+                      <li><a class="dropdown-item" value="Premium" [(ngModel)]="booking.seatClass" >Premium</a></li>
+                    </ul>
+                  </div>
+             
+
+
+                <h3 class="heading">Select Number Of Seat</h3>
+                <!-- <div class="data4">
+                    <div class="row">
+                        <div class="col">
+                            <div class="data5">
+                                    <button type="button" (click)="reduceNumberOfSeat()" class="btn btn-default">-</button>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <h2>{{numberOfSeat}}</h2>
+                        </div>
+                        <div class="col">
+                            <button type="button" (click)="increaseNumberOfSeat()"
+                                    class="btn btn-default">+</button>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+            </div>
+            <button type="button" class="btn btn-success" (click) = "bookFlight()">BOOK NOW</button>
+        </div>
+    </div>
+
+<br>
+
+
+<div class="data7" *ngIf = "isValid">
+    <div class="card">
+        <div class="card-body">
+            <h2 *ngIf = "isHeading1" class="heading">Entre Passanger Details</h2>
+            <h2 *ngIf = "isHeading2" class="heading">Your Booking Details</h2>
+        </div>
+
+        <div class="frm" *ngIf = "isTrue">
+            <div class="row card-data">
+                <div class = "td">
+                    <table style="width:80%">
+                        <tr>
+                            <td>Name</td>
+                            <td>Age</td>
+                            <td>Gender</td>
+                            <td>Mobile No</td>
+                            <td>Email Id</td>
+                            
+                        </tr>
+                        <tr *ngFor = "let psg of passengers"> 
+                            <td>{{psg.passengerName}}</td>
+                            <td>{{psg.passengerAge}}</td>
+                            <td>{{psg.passengerGender}}</td>
+                            <td>{{psg.passengerMobile}}</td>
+                            <td>{{psg.passengerEmail}}</td>
+                            
+                            <td><button type="button" class="btn btn-outline-danger" (click)="removePassangers(psg)">Remove</button></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="frm" *ngIf = " isFrom">
+            <div class="row card-data">
+                <div class = "td">
+                    <table style="width:95%">
+                        <tr>
+                            <td>Name</td>
+                            <td>Age</td>
+                            <td>Gender</td>
+                            <td>Mobile No</td>
+                            <td>Email Id</td>
+                            <td>Country</td>
+                        </tr>
+                        <tr >
+                            <td><input type="text" placeholder="Entre Full Name of Passenger" [(ngModel)]="psnger.passengerName"></td>
+                            <td><input type="number" placeholder="Entre Age" [(ngModel)]="psnger.passengerAge"></td>
+                            <td>
+                                <select [(ngModel)]="psnger.passengerGender">
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                    <option>Other</option>
+                                </select>
+                            </td>
+                            <td><input type="text" placeholder="Entre Mobile Number" [(ngModel)] = "psnger.passengerMobile"></td>
+                            <td><input type="email" placeholder="Entre Email Id of passenger" [(ngModel)]="psnger.passengerEmail" ></td>
+                            <td><input type="text" placeholder="Entre Country Name" [(ngModel)]="psnger.passengerCountry"></td>
+                            <td><button type="button" class="btn btn-success" (click)="checkCount(psnger)">Add</button></td>
+                          
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <button *ngIf = "isConfirm" type="button"  class="btn btn-success" (click)="confirmedBooking2()">Confirm Booking</button>
+    </div>
+
+</div>

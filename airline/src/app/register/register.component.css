@@ -1,0 +1,138 @@
+.frm{
+    margin-left: 35%;
+    margin-right: 35%;
+    margin-top: 10%;
+    margin-bottom: 20%;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    border-radius: 7px;
+}
+
+.frm2{
+    padding: 10%;
+}
+
+.lgn{
+    margin-left: 70%;
+    margin-top: -11.1%;
+    
+}
+.art{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.nv{
+    background-color: lightblue;
+}
+
+.lgout{
+    margin-right: 3%;
+}
+
+.lgn{
+    margin-left: 38%;
+}
+
+
+body {
+    background-color: #f8f9fa;
+    background-image: url('/assets/images/background.jpg'); 
+
+  }
+
+  .btn-outline-success {
+    border-color: #28a745;
+    color: #28a745;
+    /* font-weight: bold; */
+  }
+  .btn-outline-success:hover {
+    background-color: #28a745;
+    color: #fff;
+  }
+  .frm {
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+  .frm2 {
+    max-width: 500px;
+    color:white;
+    width: 100%;
+    /* background-color:#c3e6cb; */
+    /* background: linear-gradient(bottom, #c3e6cb, white); height: 200px; */
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+    padding: 50px;
+
+  }
+  .form-label {
+    font-weight: bold;
+    color: #333;
+  }
+  .btn-outline-success[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2rem;
+    margin-top: 20px;
+  }
+  .alert {
+    margin-bottom: 20px;
+  }
+  .alert-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+    border-color: #f5c6cb;
+  }
+  .alert-danger .btn-close {
+    color: #721c24;
+  }
+  .alert-success {
+    background-color: #d4edda;
+    color: #155724;
+    border-color: #c3e6cb;
+  }
+  .alert-success .btn-close {
+    color: #155724;
+  }
+
+  .logo-text {
+    font-family: Arial, sans-serif;
+    font-size: 50px;
+  }
+  
+  .gradient-text {
+    background: linear-gradient(to right, #2196f3, #6ec6ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .underline {
+    text-decoration: underline;
+    text-underline-position: under;
+  }
+
+
+.lgout{
+    margin-right: 3%;
+    padding: 0%;
+    margin-top: 0;
+}
+
+.search{
+    margin-right: 1%;
+}
+.nav1{
+    margin-right: -30%;
+}
+
+.navbar{
+    background: linear-gradient(to bottom, #87CEEB, #FFFFFF);
+}
+
+.form-group{
+    margin-bottom: 10px;
+}
